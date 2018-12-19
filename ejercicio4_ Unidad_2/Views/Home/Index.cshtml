@@ -1,0 +1,57 @@
+﻿
+
+ 
+<h1> Listado de Productos</h1>
+
+
+
+
+@model IEnumerable<ejercicio4__Unidad_2.Models.Producto>
+<Table>
+    <tr>
+        <th>
+                    Id
+        </th>
+         <th>
+                 Descripcion
+        </th>
+         <th>
+                 Precio
+        </th>
+         <th>
+                 Fabricacion
+            </th>
+    </tr>
+    @foreach (var Mercancia in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(ModelMercancia => Mercancia.Id)
+            </td>
+           
+            <td>
+                @Html.DisplayFor(ModelMercancia => Mercancia.Descripcion)
+            </td>
+           
+            <td>
+                @Html.DisplayFor(ModelMercancia => Mercancia.Precio)
+            </td>
+           
+            <td>
+       @Html.DisplayFor(ModelMercancia => Mercancia.Fabricacion)
+            </td>
+           
+            </tr>
+
+        // Error N° 1: En este ejercicio se proyectaba un error de sintasis, el cual era el Operador <tr>; su error estaba en la falta del (slash /) al cerrar </tr>
+        // Error N° 2: Para poder mostrar el titulo del (Listado del Producto) modifiqué "@}ViewBag.Title=" y agregué <h1> Listado de Productos</h1>
+    }
+
+
+
+
+
+
+
+
+
